@@ -13,7 +13,7 @@ function SlideWrapper({ children, onClickHandler }) {
       <div className="parent">
         <Header />
         <div className="child">
-          <div className="subChild">{children}</div>
+          <div style={{ display: "flex" }}>{children}</div>
         </div>
         <Footer onClickHandler={onClickHandler} />
       </div>

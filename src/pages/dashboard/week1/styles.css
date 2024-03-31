@@ -1,0 +1,65 @@
+.headingParent {
+  display: flex;
+  justify-content: center;
+  .heading {
+    background-color: #fe6784;
+    border: 3.31px dashed #ffaebe;
+    box-shadow: 0px 0px 11.047767639160156px 0px #00000040;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 32px;
+    line-height: 35px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 400;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.subHeading {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -6%;
+  color: #1e242f;
+}
+.keyParentDiv {
+  display: flex;
+  justify-content: space-between;
+  background-color: #25a3a1;
+  border: 3px dashed #a4fdfb;
+  box-shadow: 0px 0px 10px 0px #00000040;
+  border-radius: 5px;
+  .keyElements {
+    padding: 11px 14px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: white;
+  }
+}
+.familiar {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1e242f;
+}
+.listItemParent {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  padding-right: 26px;
+  .listUlClass {
+    list-style-type: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: #1e242f;
+    padding-top: 17px;
+    .list2ndLi {
+      padding-bottom: 50px;
+    }
+  }
+}

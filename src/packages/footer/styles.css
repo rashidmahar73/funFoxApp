@@ -1,0 +1,9 @@
+.footerParent {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 70px;
+  .footerChild {
+    display: flex;
+  }
+}

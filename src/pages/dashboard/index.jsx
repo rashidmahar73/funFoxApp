@@ -13,9 +13,7 @@ function Dashboard() {
     if (clickedItem === footerBtnKeys.next) {
       navigate(`/${intialValue + 1}`);
     } else if (clickedItem === footerBtnKeys.previous) {
-      if (intialValue === 1) {
-        navigate("/");
-      }
+      if (intialValue === 1) navigate("/");
     }
   }
   return (

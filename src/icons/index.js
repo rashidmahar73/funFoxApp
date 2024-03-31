@@ -22,6 +22,8 @@ import { SunnyDay } from "./sunnyDay";
 import { RainyNight } from "./rainyNight";
 import { ClockIcon } from "./clock";
 import { HomeIcon } from "./home";
+import { PinkClipIcon } from "./pinkClip";
+import { ArrowIcon } from "./arrowIcon";
 
 import leftSideLayer from "./leftSideLayer.png";
 import rightSideLayer from "./rightSideLayer.png";
@@ -29,6 +31,8 @@ import listItemBg from "./listItemBg.png";
 
 export {
   listItemBg,
+  ArrowIcon,
+  PinkClipIcon,
   ClockIcon,
   RainyNight,
   HomeIcon,

@@ -11,15 +11,13 @@ const leftItems = [
     icon: "books",
     key: 3,
   },
-  
 ];
 
-const rightItems = [
+const rightOddItems = [
   {
     icon: "scale",
     key: 4,
   },
-
   {
     icon: "greenBook",
     key: 5,
@@ -29,5 +27,19 @@ const rightItems = [
     key: 6,
   },
 ];
+const rightEvenItems = [
+  {
+    icon: "scale",
+    key: 4,
+  },
+  {
+    icon: "pinkClip",
+    key: 7,
+  },
+  {
+    icon: "victoryCap",
+    key: 6,
+  },
+];
 
-export { leftItems, rightItems };
+export { leftItems, rightOddItems, rightEvenItems };

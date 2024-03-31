@@ -1,13 +1,13 @@
 import { Footer } from "../footer";
 import { SideLayer } from "../sideLayer";
 
-import { leftItems, rightItems } from "./helpers";
+import { rightOddItems, rightEvenItems, leftItems } from "./helpers";
 
 import { Logo, Week1Icon } from "../../icons";
 
 import "./styles.css";
 
-function SlideWrapper({ children, onClickHandler }) {
+function SlideWrapper({ children, onClickHandler, currentSlide }) {
   return (
     <>
       <div className="parent">
@@ -15,7 +15,7 @@ function SlideWrapper({ children, onClickHandler }) {
         <div className="child">
           <div style={{ display: "flex" }}>{children}</div>
         </div>
-        <Footer onClickHandler={onClickHandler} />
+        <Footer onClickHandler={onClickHandler} currentSlide={currentSlide} />
       </div>
     </>
   );
@@ -30,12 +30,14 @@ function Header() {
   );
 }
 
-function Container({ children }) {
+function Container({ children, isEvenSlide }) {
+  const modifiedRightSlide = isEvenSlide ? rightEvenItems : rightOddItems;
+
   return (
     <>
       <SideLayer items={leftItems} direction={1} />
       <div className="content">{children}</div>
-      <SideLayer items={rightItems} direction={2} />
+      <SideLayer items={modifiedRightSlide} direction={2} />
     </>
   );
 }

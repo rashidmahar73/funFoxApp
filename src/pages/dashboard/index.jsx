@@ -1,27 +1,46 @@
+import { useState } from "react";
+
 import { Route, Routes, useNavigate } from "react-router-dom";
 
 import { SlideWrapper } from "../../packages";
-import { Week1 } from "./week1";
-import { Week2 } from "./week2";
+
+import { ModuleHandler } from "./helpers";
 
 import { footerBtnKeys } from "../../utils/constants";
 
 function Dashboard() {
+  const [currentSlide, setCurrentSlide] = useState(1);
+
   const navigate = useNavigate();
-  let intialValue = 1;
+
   function onClickHandler(clickedItem) {
     if (clickedItem === footerBtnKeys.next) {
-      navigate(`/${intialValue + 1}`);
+      if (currentSlide < 2) {
+        setCurrentSlide(currentSlide + 1);
+        navigate(`/${currentSlide + 1}`);
+      }
     } else if (clickedItem === footerBtnKeys.previous) {
-      if (intialValue === 1) navigate("/");
+      if (currentSlide > 2) {
+        setCurrentSlide(currentSlide - 1);
+        navigate(`/${currentSlide - 1}`);
+      } else {
+        navigate("/");
+        setCurrentSlide(1);
+      }
     }
   }
+
+  const isEven = currentSlide % 2 === 0;
+
+  const conditionalRoute = currentSlide < 2 ? "/" : `/${currentSlide}`;
   return (
-    <SlideWrapper onClickHandler={onClickHandler}>
-      <SlideWrapper.Container>
+    <SlideWrapper onClickHandler={onClickHandler} currentSlide={currentSlide}>
+      <SlideWrapper.Container isEvenSlide={isEven}>
         <Routes>
-          <Route path="/" element={<Week1 />} />
-          <Route path="/2" element={<Week2 />} />
+          <Route
+            path={conditionalRoute}
+            element={<ModuleHandler currentSlide={currentSlide} />}
+          />
         </Routes>
       </SlideWrapper.Container>
     </SlideWrapper>

@@ -1,21 +1,30 @@
-import { LeftFooterIcon, RightFooterIcon } from "../../icons";
+import { ArrowIcon, LeftFooterIcon, RightFooterIcon } from "../../icons";
 import { RenderIcon } from "../../icons/renderIcon";
-import { btnItems } from "./helpers";
 
 import "./styles.css";
 
-function Footer({ onClickHandler }) {
+function Footer({ onClickHandler, currentSlide }) {
   return (
     <div className="footerParent">
       <LeftFooterIcon />
       <div className="footerChild">
-        {btnItems?.map(({ text }) => {
-          return (
-            <button onClick={() => onClickHandler(text)}>
-              {RenderIcon(text)}
-            </button>
-          );
-        })}
+        <div onClick={() => onClickHandler("previous")} className="slideBtns">
+          {RenderIcon("previous")}
+        </div>
+        <div
+          onClick={() => onClickHandler("pageNumber")}
+          className="pageNumberClass"
+        >
+          <span className="secondChild">{currentSlide}</span>{" "}
+          <div className="thirdChild">
+            <span className="arrowIcon">
+              <ArrowIcon />
+            </span>
+          </div>
+        </div>
+        <div onClick={() => onClickHandler("next")} className="slideBtns">
+          {RenderIcon("next")}
+        </div>
       </div>
       <RightFooterIcon />
     </div>

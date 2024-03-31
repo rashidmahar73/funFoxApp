@@ -16,6 +16,7 @@ import {
   sideLayerIconKeys,
 } from "../utils/constants";
 import { week2Keys } from "../pages/dashboard/week2/constants";
+import { PinkClipIcon } from "./pinkClip";
 
 function RenderIcon(key) {
   if (key === sideLayerIconKeys.pencil) {
@@ -40,6 +41,8 @@ function RenderIcon(key) {
     return <SunnyDay />;
   } else if (key === week2Keys.rainyNight) {
     return <RainyNight />;
+  } else if (key === sideLayerIconKeys.pinkClip) {
+    return <PinkClipIcon />;
   }
 }
 

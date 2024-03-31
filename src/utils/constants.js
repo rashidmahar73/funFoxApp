@@ -5,6 +5,7 @@ const sideLayerIconKeys = {
   scale: 4,
   greenBook: 5,
   victoryCap: 6,
+  pinkClip:7
 };
 
 const directionKeys = {

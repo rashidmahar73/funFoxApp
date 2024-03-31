@@ -12,7 +12,7 @@ import "./styles.css";
 
 function Week1() {
   return (
-    <div className="content">
+    <div>
       <div className="headingParent">
         <h1 className="heading">Elements of Story Writing</h1>
       </div>
@@ -25,25 +25,26 @@ function Week1() {
       <div className="keyParentDiv">
         <h3 className="keyElements">
           There are <span style={{ fontWeight: "700" }}>five</span> elements
-          which make the foundation for story writing. An element is an
-          essential part of something and every fiction story has the same key
-          elements:
+          which make the foundation for story <br /> writing. An element is an
+          essential part of something and <br /> every fiction story has the
+          same key elements:
         </h3>
-        <div>
+        <div className="girlWritingIcon">
           <GirlWritingIcon />
         </div>
       </div>
-      <h4 className="familiar">
-        You must be familiar with some of these. If not, do not worry! we will
-        cover all these elements as we go along.
-      </h4>
-      <div>
+
+      <div className="listItemIcons">
         <SettingPointIcon />
         <CharactersPointIcon />
         <PlotPointIcon />
         <ConflictIcon />
         <ResolutionIcon />
       </div>
+      <h4 className="familiar">
+        You must be familiar with some of these. If not, do not worry! we will
+        cover all these elements as we go along.
+      </h4>
       <div
         className="listItemParent"
         style={{

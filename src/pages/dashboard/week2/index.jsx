@@ -13,11 +13,12 @@ function Week2() {
       </h1>
       <h2 className="subHeading">(take a minute to think about this)</h2>
       <div className="subContentTop">
+        <div></div>
         {subContentItems?.map(({ text, icon }) => {
           return (
             <div className="subContentParent">
               <div className="subContentChild">{RenderIcon(icon)}</div>
-              <h3 className="description">{text}</h3>
+              <span className="description">{text}</span>
             </div>
           );
         })}
@@ -27,15 +28,26 @@ function Week2() {
       </h4>
       <div className="questionDetails">
         <span>Any guesses?</span>
-        <input type="text" className="answerInput" />
-        <ClockIcon />
-        <HomeIcon />
+        <div className="subContentChild">
+          <input type="text" className="answerInput" />
+        </div>
+        <p>Hint : </p>
+        <div>
+          <ClockIcon />
+        </div>
+        <div className="icon">
+          <HomeIcon />
+        </div>
       </div>
-      <div className="keyParentDiv">
+      <div className="keyDiv">
         <h3 className="keyElements">
-          Setting is the time <ClockIcon width="34.72" height="34.72" /> and
-          place <HomeIcon width="34.72" height="34.72" /> of a story. It often
-          answers the questions: when? and where?
+          Setting is the time <HomeIcon width="34.72" height="34.72" />
+          <span> and place </span>
+          <ClockIcon width="34.72" height="34.72" />
+          <span>
+            {" "}
+            of a story. It often answers the questions: when? and where{" "}
+          </span>
         </h3>
       </div>
       <p className="footerText">

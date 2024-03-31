@@ -47,10 +47,3 @@ function Week2() {
   );
 }
 export { Week2 };
-
-function View({ text, icon }) {
-  <div className="subContentParent">
-    <div className="subContentChild">{RenderIcon(icon)}</div>
-    <h3 className="description">{text}</h3>
-  </div>;
-}

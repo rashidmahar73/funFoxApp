@@ -2,27 +2,19 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 
 import { SlideWrapper } from "../../packages";
 import { Week1 } from "./week1";
+import { Week2 } from "./week2";
 
 import { footerBtnKeys } from "../../utils/constants";
-import { Week2 } from "./week2";
-import { useState } from "react";
 
 function Dashboard() {
-  const [slide, setSlide] = useState(1);
-
   const navigate = useNavigate();
-
+  let intialValue = 1;
   function onClickHandler(clickedItem) {
     if (clickedItem === footerBtnKeys.next) {
-      setSlide(slide + 1);
-      navigate(`/${slide}`);
+      navigate(`/${intialValue + 1}`);
     } else if (clickedItem === footerBtnKeys.previous) {
-      if (slide === 1) {
-        setSlide(1);
+      if (intialValue === 1) {
         navigate("/");
-      } else {
-        // setSlide(slide - 1);
-        // navigate(`/${slide}`);
       }
     }
   }
